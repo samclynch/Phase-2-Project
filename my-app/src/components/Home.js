@@ -8,5 +8,5 @@ export default function Home() {
         </View>
     )
 }
-
+// https://www.npmjs.com/package/react-copy-to-clipboard
 const styles = StyleSheet.create({})
