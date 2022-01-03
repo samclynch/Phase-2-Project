@@ -19,10 +19,17 @@ function App() {
 
   const [background, setBackground] = useState("#071415");
   const [current, setCurrent] = useState(null);
+  
+  useEffect(()=>{
+    const timeoutId= setTimeout(()=> {
+      setCurrent(null)
+    },5000)
+    return () => clearTimeout(timeoutId)
+  },[current])
 
   return (
     <div className="App" style ={{background : background}}>
-        {current !== null &&<h1>Copied {current}</h1>}
+        {current !== null && <h1> Copied {current}</h1>}
         <div className="container">
           {colors.map((color, index)=> (
             <div key={index}className = "card">
