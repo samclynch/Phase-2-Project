@@ -1,34 +1,44 @@
 {
   "colors": [
     {
-      "name":"#9253a1"
+      "name": "#9253a1",
+      "id": 1
     },
     {
-      "name":"#f063a4"
+      "name": "#f063a4",
+      "id": 2
     },
     {
-      "name":"#2dc5f4"
+      "name": "#2dc5f4",
+      "id": 3
     },
     {
-      "name":"#fcee21"
+      "name": "#fcee21",
+      "id": 4
     },
     {
-      "name":"#f16164"
+      "name": "#f16164",
+      "id": 5
     },
     {
-      "name":"#70327e"
+      "name": "#70327e",
+      "id": 6
     },
     {
-      "name":"#a42963"
+      "name": "#a42963",
+      "id": 7
     },
     {
-      "name":"#0b6a88"
+      "name": "#0b6a88",
+      "id": 8
     },
     {
-      "name":"#f89e4f"
+      "name": "#f89e4f",
+      "id": 9
     },
     {
-      "name":"#ec015a"
+      "name": "#ec015a",
+      "id": 10
     }
   ]
 }
