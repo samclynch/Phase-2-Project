@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react"
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { NavLink } from "react-router-dom";
 
 
 
-function ColorPalleteItems({ colors, searchTerm }) {
-    const [background, setBackground] = useState("#071415");
+
+function ColorPalleteItems({ colors, searchTerm, background, setBackground}) {
     const [current, setCurrent] = useState(null);
     const crToShow = colors.filter((cr) =>
         cr.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -19,12 +18,10 @@ function ColorPalleteItems({ colors, searchTerm }) {
     }, [current])
 
     return (
-        <div className="App" style={{ background: background }}>
-            <NavLink className='button' exact to="/">Home</NavLink>
-            <NavLink className='button' exact to="/add">Add Color</NavLink>
+        <div className='meow'style={{ background: background }}>
             {current !== null && <h1> Copied {current}</h1>}
             <div className="container">
-                {crToShow.map((color) => (
+            {crToShow.map((color) => (
                     <div key={color.name} className="card">
                         <div style={{
                             background: color.name,
