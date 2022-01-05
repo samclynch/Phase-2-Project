@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 
 function AddColorForm({ addColor }) {
     const [formData, setFormData] = useState({
@@ -18,14 +17,12 @@ function AddColorForm({ addColor }) {
     };
 
     return (
-        <div className="ui segment">
-            <NavLink className='button' exact to="/">Home</NavLink>
-            <NavLink className='button' exact to="/add">Add Color</NavLink>
-            <form className="ui form" onSubmit={onSubmit}>
-                <div className="inline fields">
-                    <input type="text" name="name" onChange={handleChange} />
+        <div style={{textAlign:"center"}} >
+            <form  onSubmit={onSubmit} >
+                <div>
+                    <input type="text" name="name" onChange={handleChange} className="hi"/>
                 </div>
-                <button className="ui button" type="submit">
+                <button type="submit" style={{margin:"15px", borderRadius:"60px" , width:"100px", height:"px", cursor: "pointer"}}>
                     Add Color
                 </button>
             </form>
