@@ -21,10 +21,10 @@ function AddColorForm({ addColor, colors, searchTerm, background, setBackground 
         <div style={{ textAlign: "center", paddingTop: "100px" }} >
             <form onSubmit={onSubmit} >
 
-                <input type="text" name="name" onChange={handleChange} className="hi" />
+                <input type="text" name="name" placeholder="Add Color" onChange={handleChange} className="hi" />
 
                 <button type="submit" className="button-12" style={{ margin: "15px", borderRadius: "60px", width: "100px", height: "27px", cursor: "pointer" }}>
-                    Add Color
+                    Submit
                 </button>
             </form>
             <ColorPalleteItems colors={colors} searchTerm={searchTerm} background={background} setBackground={setBackground} />
