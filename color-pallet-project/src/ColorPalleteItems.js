@@ -19,7 +19,7 @@ function ColorPalleteItems({ colors, searchTerm, background, setBackground}) {
 
     return (
         <div className='meow'style={{ background: background }}>
-            {current !== null && <h1> Copied {current}</h1>}
+            {current !== null && <h1 style={{ paddingTop:""}}> Copied {current}</h1>}
             <div className="container">
             {crToShow.map((color) => (
                     <div key={color.name} className="card">

@@ -29,6 +29,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-bottom: 300px;
 }
 
 .container .card {
@@ -49,7 +50,7 @@ h1 {
   cursor: pointer;
 } 
 
-.button {
+/* .button {
   padding: 0.75rem;
   border: none;
   font: inherit;
@@ -61,7 +62,7 @@ h1 {
   border: 2px solid var(--dark-turquoise);
   transition: background-color 0.2s;
   line-height: 1;
-}
+} */
 .hi{
   text-align: center;
   color: #fff;
@@ -87,8 +88,8 @@ text-align: center;
   border: none;
   width: 15%;
   outline: none;
-  color: white;
+  color: black;
   padding: 0.5em;
   border-radius: 18px;
-  background: #7c7c7c2b;
+  background: white;
 }

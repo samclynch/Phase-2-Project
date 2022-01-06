@@ -2,7 +2,7 @@ import React from "react";
 
 function Search({ setSearchTerm }) {
     return (
-        <div >
+        <div style={{paddingTop:"100px"}}>
             <input className="hi"
                 type="text"
                 placeholder="Search for a Color"
