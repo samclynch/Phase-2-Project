@@ -3,6 +3,7 @@ import AddColorForm from './AddColorForm';
 import './App.css';
 import ColorPalleteItems from './ColorPalleteItems';
 import Search from './Search';
+import Message from './Message';
 import {
   BrowserRouter as Router,
   Switch,
@@ -41,13 +42,16 @@ function App() {
 
 
   return (
-    <div className='App' style={{background: background}}>
+    <div className='App' style={{ background: background }}>
       <Router>
-      <NavBar />
+        <NavBar setBackground={setBackground} />
         <Switch>
           <Route exact path="/">
-           <Search setSearchTerm={setSearchTerm} />
+            <Message />
             <ColorPalleteItems colors={colors} searchTerm={searchTerm} background={background} setBackground={setBackground} />
+          </Route>
+          <Route exact path="/search">
+            <Search setSearchTerm={setSearchTerm} colors={colors} searchTerm={searchTerm} background={background} setBackground={setBackground} />
           </Route>
           <Route path="/add">
             <AddColorForm addColor={addColor} colors={colors} searchTerm={searchTerm} background={background} setBackground={setBackground} />
