@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import ColorPalleteItems from "./ColorPalleteItems";
 
-function AddColorForm({ addColor }) {
+function AddColorForm({ addColor,colors, searchTerm, background,setBackground }) {
     const [formData, setFormData] = useState({
         name: "",
         id: ""
@@ -17,15 +18,16 @@ function AddColorForm({ addColor }) {
     };
 
     return (
-        <div style={{textAlign:"center"}} >
+        <div style={{textAlign:"center", paddingTop:"100px"}} >
             <form  onSubmit={onSubmit} >
                 <div>
                     <input type="text" name="name" onChange={handleChange} className="hi"/>
                 </div>
-                <button type="submit" style={{margin:"15px", borderRadius:"60px" , width:"100px", height:"px", cursor: "pointer"}}>
+                <button type="submit" style={{margin:"15px", borderRadius:"60px" , width:"100px", height:"25px", cursor: "pointer"}}>
                     Add Color
                 </button>
             </form>
+            <ColorPalleteItems colors={colors} searchTerm={searchTerm} background={background} setBackground={setBackground} />
         </div>
     );
 }

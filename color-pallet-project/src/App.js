@@ -6,8 +6,7 @@ import Search from './Search';
 import {
   BrowserRouter as Router,
   Switch,
-  Route, 
-  NavLink
+  Route
 } from "react-router-dom";
 import NavBar from './NavBar';
 
@@ -51,7 +50,7 @@ function App() {
             <ColorPalleteItems colors={colors} searchTerm={searchTerm} background={background} setBackground={setBackground} />
           </Route>
           <Route path="/add">
-            <AddColorForm addColor={addColor} />
+            <AddColorForm addColor={addColor} colors={colors} searchTerm={searchTerm} background={background} setBackground={setBackground} />
           </Route>
         </Switch>
       </Router>
