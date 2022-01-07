@@ -4,7 +4,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 
 
-function ColorPalleteItems({ colors, searchTerm, background, setBackground}) {
+function ColorPalleteItems({ colors, searchTerm, background, setBackground }) {
     const [current, setCurrent] = useState(null);
     const crToShow = colors.filter((cr) =>
         cr.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -18,10 +18,10 @@ function ColorPalleteItems({ colors, searchTerm, background, setBackground}) {
     }, [current])
 
     return (
-        <div className='meow'style={{ background: background }}>
-            {current !== null && <h1 style={{ paddingTop:""}}> Copied {current}</h1>}
+        <div style={{ background: background, paddingTop: '35px' }}>
+            {current !== null && <h1 style={{ paddingTop: "20px" }}> Copied {current}</h1>}
             <div className="container">
-            {crToShow.map((color) => (
+                {crToShow.map((color) => (
                     <div key={color.name} className="card">
                         <div style={{
                             background: color.name,
